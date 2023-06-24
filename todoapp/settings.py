@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-hu^-t!byw2h@9%dqnp3y=eikdrr2x#i=ke4on+fd92-da8$#h$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -77,8 +77,13 @@ WSGI_APPLICATION = 'todoapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+       'ENGINE': 'django.db.backends.postgresql',
+        'URL': 'postgresql://postgres:zWiTWeyiUMJva8lqONaN@containers-us-west-1.railway.app:6671/railway',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'zWiTWeyiUMJva8lqONaN',
+        'HOST': 'containers-us-west-1.railway.app',
+        'PORT': 6671,
     }
 }
 
